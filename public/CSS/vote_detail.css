@@ -1,0 +1,286 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+.image-slider{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+.image-slider button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#image{
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+}
+
+.shirt-detail{
+    display: flex;
+    flex-direction: column; 
+    height: 550px;
+}
+
+.detail{
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.detail h1{
+    width: 80%;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.detail p{
+    width: 90%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.score-detail{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-self: center;
+    margin-left: 30px;
+    margin-top: auto;
+}
+
+.score-detail label{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.score-detail div button{
+    width: 507px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #0066FF;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.score-detail div button:hover{
+    background-color: #0872b8;
+}
+
+.score-detail div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#number{
+    width: 149px;
+    height: 139px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.imageSlider{
+    display: none;
+}
+
+
+@keyframes previousPicture{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes removeCurrentToPrevious{
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }to{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes nextPicture {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes removeCurrentToNext {
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }to{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+
+    .images img{
+        width: 300px;
+    }
+
+    .image-slider{
+        height: 250px;  
+    }
+
+    #image{
+        width: 300px;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .detail{
+        margin-top: 10px;
+    }
+
+    .detail h1{
+        font-size: 24px;
+    }
+
+    .detail p{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    #number{
+        margin-right: 0;
+    }
+}
+
+@media (min-width:601px) and (max-width:768px) {
+    .images img{
+        width: 400px;
+    }
+
+    #image{
+        width: 450px;
+    }
+
+    .image-slider{
+        height: 300px;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .detail{
+        margin-top: 10px;
+    }
+    .detail h1{
+        font-size: 30px;
+    }
+    .detail p{
+        margin-top: 10px;
+    }
+
+    .shirt-detail{
+        height: 650px;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+    #image{
+        width: 500px;
+    }
+    .content{
+        flex-direction: column;
+    }   
+
+    .image-slider {
+            height: 300px;
+    }
+    .detail{
+        margin-top: 10px;
+    }
+    #number{
+        margin-right: 50px;
+    }
+
+    .vote-button{
+        font-size: 25px;
+    }
+}
+
+@media (min-width:993px) and (max-width:1200px) {
+    .detail{
+        margin-top: 10px;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .image-slider{
+        height: 400px;
+    }
+
+    .shirt-detail{
+        height: 680px;
+    }
+
+    #image{
+        width: 600px;
+    }
+
+    #number{
+        margin-right: 100px;
+    }
+
+    .vote-button {
+        font-size: 30px;
+    }
+}
+
+@media (min-width:1201px) {
+    .content{
+        flex-direction: column;
+    }
+
+    .image-slider{
+        height: 400px;
+        margin-top: 20px;
+    }
+
+    .detail label{
+        font-size: 35px;
+    }
+
+    .detail p{
+        font-size: 24px;
+    }
+
+    #image{
+        width: 800px;
+    }
+}

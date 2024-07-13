@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Inria Sans";
+}
+
+
+.form-login form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#event{
+    font-size: 40px;
+    margin-left: auto;
+}
+
+#it-kku{
+    font-size: 84px;
+    color: #0066ff;
+    margin-top: -15px;
+}
+
+#it-full{
+    font-weight: lighter;
+    font-size: 18px;
+    color: rgb(36, 36, 36);
+}
+
+#kku-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #959595;
+    font-size: 14px;
+    font-family: "Inria Sans";
+    border: 1px solid #959595;
+    border-radius: 9px;
+    width: 500px;
+    height: 55px;
+    margin-top: 30px;
+}
+
+#kku-login:hover{
+    border-color: #282828;
+    color: #282828;
+}
+
+.or{
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: "Inria Sans";
+    display: flex;
+    align-items: center;
+    color: #959595;
+}
+
+#or-text{
+    margin: 0 10px;
+}
+
+.line{
+    height: 1px;
+    width: 230px;
+    background-color: #959595;
+}
+
+.form-login form input{
+    width: 487px;
+    height: 44px;
+    border-radius: 9px;
+    margin-top: 20px;
+    border: 1px solid #959595;
+    padding-left: 15px;
+}
+
+.form-login form input::placeholder{
+    color: #959595;
+    font-family: "Inria Sans";
+}
+
+#invalid{
+    margin-top: 10px;
+    text-decoration: none;
+    margin-right: auto;
+    font-family: "Inria Sans";
+    color: #FF0000;
+    display: none;
+}
+
+#forgot-pass{
+    margin-left: auto;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0066ff;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+#forgot-pass:hover{
+    text-decoration: underline;
+}
+
+#login-button{
+    width: 500px;
+    height: 52px;
+    border-radius: 9px;
+    border: none;
+    color: white;
+    background-color: #0066ff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#login-button:hover{
+    background-color: #015ae0;
+}
+
+@media (max-width : 600px) {
+    #event{
+        font-size: 30px;
+    }
+
+    #it-kku{
+        font-size: 65px;
+    }
+
+    #it-full{
+        font-size: 14px;
+    }
+
+    .form-login form input , #login-button , #kku-login{
+        width: 300px;
+    }
+
+    .form-login form{
+        width: 300px;
+    }
+
+    .or{
+        width: 300px;
+    }
+}

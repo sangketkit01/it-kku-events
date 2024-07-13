@@ -1,0 +1,278 @@
+body{
+    margin-bottom: 20px;
+}
+
+#poster{
+    width: 100%;
+}
+
+#vote-header{
+    margin-top: 30px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.count{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.countdown span{
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.countdown{
+    display: flex;
+    flex-direction: column;
+}
+
+.count div:not(:last-child){
+    margin-right: 40px;
+}
+
+.podium{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#podium-score{
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+}
+
+#podium-under-score{
+    color: white;
+}
+
+.podium div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.place img{
+    width: 120px;
+}
+
+.shirt{
+    margin-bottom: 20px;
+    width: 220px;
+    height: 220px;
+}
+
+
+.place{
+    width: 100%;
+    height: 446px;
+    background-color: #097cc7;
+    box-shadow: 0px 2px 15px black;
+    /* filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5)); */
+}
+
+
+#second{
+    height: 382px;
+}
+
+#third{
+    height: 317px;
+}
+
+.score-board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.score-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+    width: 50%;
+}
+
+.score-content label{
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 14px;
+    background-color: #D9D9D9;
+    text-align: center;
+    align-content: center;
+}
+
+#shirt-name{
+    width: 60%;
+    margin: auto;
+    height: 100px;
+    margin-right: 20px;
+}
+#shirt-score{
+    width: 110px;
+    height: 100px;
+}
+
+.shirt-picture{
+    width: 126px;
+    height: 112px;
+}
+
+.vote{
+    display: flex;
+    justify-content: center;
+}
+
+#vote-button{
+    margin-top: 50px;
+    width: 50%;
+    height: 87px;
+    border-radius: 35px;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Kanit";
+    color: white;
+    background-color: #097cc7;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#vote-button:hover{
+    background-color: #0872b8;
+}
+
+@media (max-width:600px) {
+
+
+    #vote-header{
+        font-size: 2rem;
+    }
+
+    .count{
+        font-size: 20px;
+    }
+    .countdown span{
+        font-size: 30px;
+    }
+
+    .count div:not(:last-child){
+        margin-right: 20px;
+    }
+    .shirt{
+        width: 80px;
+        height: 80px;
+    }
+
+    .place{
+        height: 336px;
+    }
+
+    #second{
+        height: 282px;
+    }
+
+    #third{
+        height: 217px;
+    }
+
+    #vote-button{
+        font-size: 25px;
+        height: 65px;
+    }
+
+    .score-content{
+        padding-top: 20px;
+        margin: auto;
+        width: 85%;
+    }
+
+    .score-content label{
+        font-size: 25px;
+    }
+
+    #shirt-name , #shirt-score{
+        font-size: 18px;
+        height: 60px;
+    }
+
+
+    .podium{
+        padding-top: 30px;
+        width: 30%;
+        margin: auto;
+    }
+}
+
+@media (min-width:601px) and (max-width:768px) {
+
+    .podium{
+        width: 80%;
+        margin: auto;
+        padding-top: 40px;
+    }
+
+    .score-content {
+            width: 80%;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+    .podium{
+        width: 70%;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .score-content {
+            width: 70%;
+    }
+}
+
+@media (min-width : 993px) and (max-width:1200px) {
+    .podium{
+        width: 60%;
+        margin: auto;
+        padding-top: 60px;
+    }
+
+    .score-content {
+        width: 60%;
+    } 
+}
+
+@media (min-width:1201px) {
+    .podium{
+        width: 50%;
+        margin: auto;
+        padding-top: 80px;
+    }
+
+    .score-content {
+            width: 50%;
+    }
+
+    #vote-button{
+        width: 50%;
+    }
+}
