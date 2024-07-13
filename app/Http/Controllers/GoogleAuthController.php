@@ -62,7 +62,6 @@ class GoogleAuthController extends Controller
 
             return redirect()->route('index')->with('data', $data);
         } catch (\Throwable $th) {
-            dd($th);
             return redirect()->route('sign_in')->withErrors(['msg' => 'Login failed. Please try again.']);
         }
     }
