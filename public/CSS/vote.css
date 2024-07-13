@@ -213,8 +213,9 @@ body{
     }
 
     #shirt-name , #shirt-score{
-        font-size: 18px;
+        font-size: 16px;
         height: 60px;
+        text-overflow: ellipsis;
     }
 
 
