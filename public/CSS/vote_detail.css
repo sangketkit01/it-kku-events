@@ -156,6 +156,7 @@
 
     #image{
         width: 300px;
+        height: 300px;
     }
     .content{
         flex-direction: column;
@@ -177,6 +178,7 @@
     #number{
         margin-right: 0;
     }
+
     .score-detail div button{
         width: 350px;
     }
@@ -189,6 +191,7 @@
 
     #image{
         width: 450px;
+        height: 300px;
     }
 
     .image-slider{
@@ -216,6 +219,7 @@
 @media (min-width:769px) and (max-width:992px) {
     #image{
         width: 500px;
+        height: 300px;
     }
     .content{
         flex-direction: column;
@@ -254,6 +258,7 @@
 
     #image{
         width: 600px;
+        height: 400px;
     }
 
     #number{
