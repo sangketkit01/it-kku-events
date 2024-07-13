@@ -177,6 +177,9 @@
     #number{
         margin-right: 0;
     }
+    .score-detail div button{
+        width: 350px;
+    }
 }
 
 @media (min-width:601px) and (max-width:768px) {
