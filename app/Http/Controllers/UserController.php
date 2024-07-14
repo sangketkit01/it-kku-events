@@ -62,7 +62,7 @@ class UserController extends Controller
         // Define event time ranges
         $logo_start = strtotime("July 11, 2024 06:00:00");
         $logo_stop = strtotime("July 14, 2024 23:59:59");
-        $shirt_start = strtotime("July 16, 2024 06:00:00");
+        $shirt_start = strtotime("July 11, 2024 06:00:00");
         $shirt_stop = strtotime("July 16, 2024 23:59:59");
 
         // Determine if the current time is within the event's time window
@@ -158,7 +158,7 @@ class UserController extends Controller
         return view('vote', compact('event', 'header', 'return_data', 'score_board', 'score'));
     }
 
-    function vote_check($event, $id)
+    function vote_check($event, $id,$color)
     {
         $dead_line = $this->check_deadline($event);
         if ($dead_line) {
@@ -183,20 +183,41 @@ class UserController extends Controller
         $vote_data = DB::table($table)->where('id', $id)->first();
 
         if ($user_data) {
-            $update_data = [
-                $vote => $vote_data->name,
-                $voted => true
-            ];
+            if($color === "" || $color === "logo"){
+                $update_data = [
+                    $vote => $vote_data->name,
+                    $voted => true
+                ];
+    
+                DB::table('votes')->update($update_data);
+            }else{
+                $update_data = [
+                    $vote => $vote_data->name,
+                    $voted => true,
+                    "shirt_color" => $color
+                ];
 
-            DB::table('votes')->update($update_data);
+                DB::table('votes')->update($update_data);
+            }
         } else {
-            $insert_data = [
-                'email' => Session::get('user_email'),
-                $vote => $vote_data->name,
-                $voted => true,
-            ];
+            if($color === "" || $color === "logo"){
+                $insert_data = [
+                    'email' => Session::get('user_email'),
+                    $vote => $vote_data->name,
+                    $voted => true,
+                ];
+    
+                DB::table('votes')->insert($insert_data);
+            }else{
+                $insert_data = [
+                    'email' => Session::get('user_email'),
+                    $vote => $vote_data->name,
+                    $voted => true,
+                    "shirt_color" => $color
+                ];
 
-            DB::table('votes')->insert($insert_data);
+                DB::table('votes')->insert($insert_data);
+            }
         }
 
         return redirect()->back();

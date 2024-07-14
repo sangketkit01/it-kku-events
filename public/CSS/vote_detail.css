@@ -103,6 +103,44 @@
     display: none;
 }
 
+.colors {
+    display: flex;
+    margin-left: 18px;
+    gap: 20px;
+}
+
+.colors input[type="radio"] {
+    display: none;
+}
+
+.colors label {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 11px;
+    border: 2px solid transparent;
+}
+
+.colors input[type="radio"]:checked+label {
+    box-shadow: 0 0 10px 5px rgb(60, 60, 60);
+}
+
+#color1{
+    background-color: #25295A;
+}
+
+#color2{
+    background-color: #1E3874;
+}
+
+#color3{
+    background-color: #1D3D75;
+}
+
+
 
 @keyframes previousPicture{
     from{
@@ -289,6 +327,7 @@
     }
 
     #image{
-        width: 800px;
+        width: 600px;
+        height: 500px;
     }
 }

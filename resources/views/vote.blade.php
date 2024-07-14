@@ -19,6 +19,7 @@
              @if(isset($return_data[1]))
                 <img src="{{explode(',',$return_data[1]->image_path)[0]}}" class="shirt" alt="">
             @endif   
+
             <div class="place" id="second">
                 <img src="/index/silver.png" alt="">
                 @if(isset($score[1]))
