@@ -130,11 +130,12 @@ class UserController extends Controller
 
         $array_data = array();
         $all_data = DB::table('votes')
-            ->select($where, DB::raw("COUNT(*) as count"))
-            ->groupBy($where)
-            ->havingRaw("COUNT(*) >= 0")
-            ->orderBy('count', 'DESC')
-            ->get();
+        ->select($where, DB::raw("COUNT(*) as count"))
+        ->whereNotNull($where)
+        ->groupBy($where)
+        ->havingRaw("COUNT(*) >= 0")
+        ->orderBy('count', 'DESC')
+        ->get();
 
         $array_data["name"] = [];
         $array_data["count"] = [];

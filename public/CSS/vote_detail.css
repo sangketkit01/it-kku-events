@@ -125,7 +125,7 @@
 }
 
 .colors input[type="radio"]:checked+label {
-    box-shadow: 0 0 10px 5px rgb(60, 60, 60);
+    border: 4px solid gray;
 }
 
 #color1{
