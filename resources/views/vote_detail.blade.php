@@ -168,8 +168,8 @@
                             showConfirmButton: false,
                             timer: 1500,
                         }).then(() => {
-                            window.location.href = '/vote/{{ $event }}/{{ $id }}/check' +
-                                "/logo"
+                            window.location.href = '/vote/{{ $event }}/{{ $id }}/check/logo'
+                
                         });
                     }
                 });

@@ -189,7 +189,7 @@ class UserController extends Controller
                     $voted => true
                 ];
     
-                DB::table('votes')->update($update_data);
+                DB::table('votes')->where('email',Session::get('email'))->update($update_data);
             }else{
                 $update_data = [
                     $vote => $vote_data->name,
@@ -197,7 +197,7 @@ class UserController extends Controller
                     "shirt_color" => $color
                 ];
 
-                DB::table('votes')->update($update_data);
+                DB::table('votes')->where('email', Session::get('email'))->update($update_data);
             }
         } else {
             if($color === "" || $color === "logo"){
@@ -206,8 +206,8 @@ class UserController extends Controller
                     $vote => $vote_data->name,
                     $voted => true,
                 ];
-    
-                DB::table('votes')->insert($insert_data);
+
+                DB::table('votes')->where('email', Session::get('email'))->update($insert_data);
             }else{
                 $insert_data = [
                     'email' => Session::get('user_email'),
@@ -216,7 +216,7 @@ class UserController extends Controller
                     "shirt_color" => $color
                 ];
 
-                DB::table('votes')->insert($insert_data);
+                DB::table('votes')->where('email', Session::get('email'))->update($insert_data);
             }
         }
 
