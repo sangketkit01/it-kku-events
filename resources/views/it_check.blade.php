@@ -30,7 +30,7 @@
         </script>
         <div class="content" style="height: 220px">
             <label for="" id="line1">ขออภัย!</label>
-            <label for="" id="line2">มีผู้ยืนยันตัวตนด้วย<span style="color: #FF0000">รหัสนี้</span>แล้ว</label>  
+            <label for="" id="line2">มีผู้ยืนยันตัวตนด้วย<span style="color: #FF0000">รหัสนี้</span>แล้ว</label> 
             <button id="ok-blue" class="new-button" onclick="window.location.href='/check'">OK</button>
         </div>
     @elseif (isset($is_it) && $is_it == true)
@@ -60,8 +60,11 @@
         </script>
         <div class="content" style="height: 220px">
             <label for="" id="line1">ขออภัย!</label>
-            <label for="" id="line2">คุณ<span id="it" style="color: #FF0000;">ไม่มีสิทธิ์</span>ใช้งาน</label>  
-            <button id="ok-red" class="new-button" onclick="window.location.href='/'">เยี่ยมชม</button>
+            <label for="" id="line2">คุณ<span id="it" style="color: #FF0000;">ไม่มีสิทธิ์</span>ใช้งาน</label> 
+            <div class="buttons">
+                <button id="ok-blue" class="new-button" onclick="window.location.href='/again'">กรอกรหัสใหม่</button>
+                <button id="ok-red" class="new-button" onclick="window.location.href='/'">เยี่ยมชม</button>
+            </div> 
         </div>
     @endif
 

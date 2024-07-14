@@ -324,4 +324,19 @@ class UserController extends Controller
 
         return view('it_check', compact('is_it'));
     }
+
+    function again(){
+        try {
+            $user_data = DB::table('userdbs')->where('email', Session::get('user_email'))->first();
+
+            if ($user_data->is_it === 1) {
+                return redirect()->route('index');
+            } else {
+                DB::table('userdbs')->where('email',Session::get('user_email'))->insert(["is_it"=>null]);
+                return redirect()->view("it_check");
+            }
+        } catch (\Throwable $th) {
+            return view("it_check");
+        }
+    }
 }

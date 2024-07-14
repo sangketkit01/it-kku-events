@@ -20,6 +20,7 @@ Route::get('/vote/{event}/detail/{id}', [UserController::class, "vote_detail"])-
 
 Route::get("/check", [UserController::class, "check"])->name('check');
 Route::post('/it/check/{email}', [UserController::class, "it_check"])->name('it_check');
+Route::get('/again',[UserController::class,'again'],'again')->name('again');
 
 Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
