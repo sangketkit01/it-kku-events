@@ -94,7 +94,6 @@
             const secondElement = document.getElementById("seconds");
             secondElement.innerText = Math.floor((unixTimeLeft % minute) / second);
         }    
-
             function run(){
                 countDown();
                 setInterval(countDown,second);
