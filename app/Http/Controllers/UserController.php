@@ -70,7 +70,7 @@ class UserController extends Controller
             }
         } else if ($event === "shirt") {
             if ($now < $shirt_start || $now > $shirt_stop) {
-                return redirect()->route('index');
+               // return redirect()->route('index');
             }
         }
     }
