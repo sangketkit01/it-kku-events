@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Shirt;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
@@ -70,7 +71,8 @@ class UserController extends Controller
             }
         } else if ($event === "shirt") {
             if ($now < $shirt_start || $now > $shirt_stop) {
-                $event = "shirt"
+                $event = "shirt";
+                $event = "shirt";
                // return redirect()->route('index');
             }
         }
