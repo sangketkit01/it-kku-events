@@ -14,7 +14,7 @@
         <div class="nav">
             <a href="/" class="left"><img src="/nav/kku-logo.png" alt="" /></a>
             <div class="h-line"></div>
-            <a href="/" class="left"><img src="/nav/cp-logo.png" alt="" /></a>
+            <a href="/" class="left"><img src="/nav/it-logo.svg" alt="" /></a>
 
             <div class="right">
                 <a href="/" id="home">หน้าแรก</a>

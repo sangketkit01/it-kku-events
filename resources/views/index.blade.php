@@ -63,7 +63,7 @@
         </div>
 
         <div class="events" id="shirt-event">
-            <img src="/index/logo-poster.png" alt="">
+            <img src="/index/shirt-poster.png" alt="">
             <div class="detail">
                 <div class="date">
                     <p>July</p>
@@ -82,8 +82,8 @@
         const now = new Date().getTime();
         const logo_open = new Date("July 11, 2024 06:00:00").getTime();
         const logo_close = new Date("July 14, 2024 23:59:59").getTime();
-        const shirt_open = new Date("July 16 2024 06:00:00").getTime();
-        const shirt_close = new Date("July 16 2024 23:59:59").getTime();
+        const shirt_open = new Date("July 15 2024 01:00:00").getTime();
+        const shirt_close = new Date("July 15 2024 23:59:59").getTime();
 
         let logo_event = document.querySelector('#logo-event')
         let shirt_event = document.querySelector('#shirt-event')
