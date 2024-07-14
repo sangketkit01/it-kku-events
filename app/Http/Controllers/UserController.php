@@ -183,13 +183,13 @@ class UserController extends Controller
         $vote_data = DB::table($table)->where('id', $id)->first();
 
         if ($user_data) {
-            if($color === "" || $color == "logo"){
+            if(($color === "" || $color == "logo")){
                 $update_data = [
                     $vote => $vote_data->name,
                     $voted => true
                 ];
     
-                DB::table('votes')->where('email',Session::get('email'))->update($update_data);
+                DB::table('votes')->where('email',Session::get('user_email'))->update($update_data);
             }else{
                 $update_data = [
                     $vote => $vote_data->name,
@@ -197,17 +197,17 @@ class UserController extends Controller
                     "shirt_color" => $color
                 ];
 
-                DB::table('votes')->where('email', Session::get('email'))->insert($update_data);
+                DB::table('votes')->where('email', Session::get('user_email'))->update($update_data);
             }
         } else {
-            if($color === "" || $color == "logo"){
+            if(($color === "") || ($color == "logo")){
                 $insert_data = [
                     'email' => Session::get('user_email'),
                     $vote => $vote_data->name,
                     $voted => true,
                 ];
 
-                DB::table('votes')->where('email', Session::get('email'))->insert($insert_data);
+                DB::table('votes')->insert($insert_data);
             }else{
                 $insert_data = [
                     'email' => Session::get('user_email'),
@@ -216,7 +216,7 @@ class UserController extends Controller
                     "shirt_color" => $color
                 ];
 
-                DB::table('votes')->where('email', Session::get('email'))->insert($insert_data);
+                DB::table('votes')->insert($insert_data);
             }
         }
 
