@@ -23,7 +23,7 @@
                         <td class="text-detail">{{$item->detail}}</td>
                     </tr>
                     <tr>
-                        <th>คะแนนโหวต:</th>
+                        <th>ผู้ออกแบบ:</th>
                         <td>{{$item->designer}}</td>
                     </tr>
                 </table>
