@@ -57,8 +57,23 @@ class UserController extends Controller
 
     function check_deadline($event)
     {
-        
+        $now = time();
 
+        $logo_start = strtotime("July 11, 2024 06:00:00");
+        $logo_stop = strtotime("July 14, 2024 23:59:59");
+        $shirt_start = strtotime("July 15, 2024 01:00:00");
+        $shirt_stop = strtotime("July 15, 2024 23:59:59");
+
+        if ($event === "logo") {
+            if ($now < $logo_start || $now > $logo_stop) {
+                return redirect()->route('index');
+            }
+        } else if ($event === "shirt") {
+            if ($now < $shirt_start || $now > $shirt_stop) {
+               // return redirect()->route('index');
+               
+            }
+        }
     }
 
 
