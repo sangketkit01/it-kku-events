@@ -59,13 +59,11 @@ class UserController extends Controller
     {
         $now = time();
 
-        // Define event time ranges
         $logo_start = strtotime("July 11, 2024 06:00:00");
         $logo_stop = strtotime("July 14, 2024 23:59:59");
-        $shirt_start = strtotime("July 11, 2024 06:00:00");
-        $shirt_stop = strtotime("July 16, 2024 23:59:59");
+        $shirt_start = strtotime("July 15, 2024 06:00:00");
+        $shirt_stop = strtotime("July 15, 2024 23:59:59");
 
-        // Determine if the current time is within the event's time window
         if ($event === "logo") {
             if ($now < $logo_start || $now > $logo_stop) {
                 return redirect()->route('index');
@@ -75,8 +73,6 @@ class UserController extends Controller
                 return redirect()->route('index');
             }
         }
-
-        // If within the time window, you might perform other actions or return true/false as needed
     }
 
 

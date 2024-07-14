@@ -194,7 +194,7 @@
 
     #image{
         width: 300px;
-        height: 300px;
+        height: 250px;
     }
     .content{
         flex-direction: column;
@@ -219,6 +219,12 @@
 
     .score-detail div button{
         width: 350px;
+    }
+
+    .colors label{
+        width: 70px;
+        height: 70px;
+        margin-left: 10px;
     }
 }
 
@@ -252,6 +258,12 @@
     .shirt-detail{
         height: 650px;
     }
+
+    .colors label {
+        width: 75px;
+        height: 75px;
+        margin-left: 10px;
+    }
 }
 
 @media (min-width:769px) and (max-width:992px) {
@@ -275,6 +287,12 @@
 
     .vote-button{
         font-size: 25px;
+    }
+
+    .colors label {
+        width: 80px;
+        height: 80px;
+        margin-left: 10px;
     }
 }
 
@@ -306,6 +324,12 @@
     .vote-button {
         font-size: 30px;
     }
+
+    .colors label {
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+    }
 }
 
 @media (min-width:1201px) {
@@ -324,6 +348,12 @@
 
     .detail p{
         font-size: 24px;
+    }
+
+    .colors label {
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
     }
 
     #image{

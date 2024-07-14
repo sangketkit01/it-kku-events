@@ -79,7 +79,7 @@
 
         function countDown() {
             const now = new Date().getTime();
-            const deadline = new Date("July 14, 2024 23:59:59").getTime();
+            const deadline = new Date("July 15, 2024 23:59:59").getTime();
             const unixTimeLeft = deadline - now;
 
             const dayElement = document.getElementById("days");
