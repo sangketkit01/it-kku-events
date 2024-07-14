@@ -61,7 +61,7 @@ class UserController extends Controller
 
         // Define event time ranges
         $logo_start = strtotime("July 11, 2024 06:00:00");
-        $logo_stop = strtotime("July 15, 2024 23:59:59");
+        $logo_stop = strtotime("July 14, 2024 23:59:59");
         $shirt_start = strtotime("July 16, 2024 06:00:00");
         $shirt_stop = strtotime("July 16, 2024 23:59:59");
 
