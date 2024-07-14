@@ -71,8 +71,7 @@
                 </div>
                 <div class="event-detail">
                     <label>กิจกรรมออกแบบเสื้อเชิ๊ต</label>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ad perspiciatis repellendus ipsa,
-                        unde assumenda doloribus delectu</p>
+                    <p>กิจกรรมโหวตเสื้อเพื่อนำมาใช้ในการจัดทำเสื้อสาขาของหลักสูตรเทคโนโลยีสารสนเทศ</p>
                 </div>
             </div>
         </div>
