@@ -143,6 +143,7 @@
         </script>
     @elseif(isset($event) && $event == 'logo')
         <script>
+            let logo = "logo";
             function vote() {
                 const swalWithBootstrapButtons = Swal.mixin({
                     customClass: {
@@ -168,7 +169,7 @@
                             showConfirmButton: false,
                             timer: 1500,
                         }).then(() => {
-                            window.location.href = '/vote/{{ $event }}/{{ $id }}/check/logo'
+                            window.location.href = `/vote/{{ $event }}/{{ $id }}/check/${logo}`
                 
                         });
                     }
