@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title',"Home")
+@section('title', 'Home')
 @push('style')
     <link rel="stylesheet" href="/CSS/index.css">
 @endpush
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-         <div class="events" id="shirt-event" style="display: none">
+        <div class="events" id="shirt-event">
             <img src="/index/logo-poster.png" alt="">
             <div class="detail">
                 <div class="date">
@@ -72,7 +72,7 @@
                 <div class="event-detail">
                     <label>กิจกรรมออกแบบเสื้อเชิ๊ต</label>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ad perspiciatis repellendus ipsa,
-                         unde assumenda doloribus delectu</p>
+                        unde assumenda doloribus delectu</p>
                 </div>
             </div>
         </div>
@@ -80,24 +80,33 @@
 
     <script>
         const now = new Date().getTime();
-        const logo_open = new Date("July 9, 2024 06:00:00").getTime();
-        let logo_deadline = logo_open - now;
-        console.log(logo_deadline);
+        const logo_open = new Date("July 11, 2024 06:00:00").getTime();
+        const logo_close = new Date("July 14, 2024 23:59:59").getTime();
+        const shirt_open = new Date("July 16 2024 06:00:00").getTime();
+        const shirt_close = new Date("July 16 2024 23:59:59").getTime();
 
         let logo_event = document.querySelector('#logo-event')
-        logo_event.addEventListener('click',()=>{
+        let shirt_event = document.querySelector('#shirt-event')
+
+        logo_event.addEventListener('click', () => {
             window.location.href = '/vote/logo';
         })
 
-        if(logo_deadline > 0){
+        if (now < logo_open || now > logo_close) {
             logo_event.classList.add('not-open');
-        }else{
+        } else {
             logo_event.classList.remove('not-open')
         }
 
-         document.querySelector('#shirt-event').addEventListener('click',()=>{
+        shirt_event.addEventListener('click', () => {
             window.location.href = '/vote/shirt';
-            
+
         })
+
+        if (shirt_open > now || shirt_close < now) {
+            shirt_event.classList.add('not-open');
+        } else {
+            shirt_event.classList.remove('not-open')
+        }
     </script>
 @endsection
