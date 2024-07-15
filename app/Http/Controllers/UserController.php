@@ -65,17 +65,16 @@ class UserController extends Controller
         $shirt_start = strtotime("July 15, 2024 01:00:00");
         $shirt_stop = strtotime("July 15, 2024 23:59:59");
 
-        if ($event === "logo") {
-            if ($now < $logo_start || $now > $logo_stop) {
-                return redirect()->route('index');
-            }
-        } else if ($event === "shirt") {
-            if ($now < $shirt_start || $now > $shirt_stop) {
-                $event = "shirt";
-                $event = "shirt";
-               // return redirect()->route('index');
-            }
-        }
+        // if ($event === "logo") {
+        //     if ($now < $logo_start || $now > $logo_stop) {
+        //         return redirect()->route('index');
+        //     }
+        // } else if ($event === "shirt") {
+        //     if ($now < $shirt_start || $now > $shirt_stop) {
+        //         $event = "shirt";
+        //         $event = "shirt";
+        //     }
+        // }
     }
 
 
@@ -230,6 +229,11 @@ class UserController extends Controller
             return $redirect;
         }
 
+        if(($event == "logo") || ($event == "shirt")){
+            return redirect()->route('index');
+        }
+
+
         $dead_line = $this->check_deadline($event);
         if ($dead_line) {
             return $dead_line;
@@ -262,6 +266,10 @@ class UserController extends Controller
         $dead_line = $this->check_deadline($event);
         if ($dead_line) {
             return $dead_line;
+        }
+
+        if (($event == "logo") || ($event == "shirt")) {
+            return redirect()->route('index');
         }
 
 

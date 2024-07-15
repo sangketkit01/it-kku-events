@@ -2,6 +2,9 @@
 @section('title', 'Vote')
 @push('style')
     <link rel="stylesheet" href="/CSS/vote.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 @endpush
 
 @section('content')
@@ -55,7 +58,8 @@
     </div>
 
     <div class="vote">
-        <a id="vote-button" href="/vote/{{ $event }}/list">ร่วมโหวต</a>
+        <!-- <a id="vote-button" href="/vote/{{ $event }}/list">ร่วมโหวต</a>  -->
+        <a id="vote-button">ร่วมโหวต</a>
     </div>
 
     <div class="score-board">
@@ -110,5 +114,23 @@
         }
 
         run();
+
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-secondary me-3 ps-4 pe-4",
+                cancelButton: "btn btn-secondary ps-3 pe-3"
+            },
+            buttonsStyling: false
+        });
+
+        document.querySelector('#vote-button').addEventListener('click', () => {
+            swalWithBootstrapButtons.fire({
+                title: "หมดเวลาโหวตแล้ว",
+                icon : "error",
+                showConfirmButton: true,
+                confirmButtonText: "OK",
+            })
+        })
     </script>
 @endsection
