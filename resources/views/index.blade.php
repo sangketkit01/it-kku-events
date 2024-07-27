@@ -78,11 +78,6 @@
     </div>
 
     <script>
-        const now = new Date().getTime();
-        const logo_open = new Date("July 11, 2024 06:00:00").getTime();
-        const logo_close = new Date("July 14, 2024 23:59:59").getTime();
-        const shirt_open = new Date("July 15 2024 01:00:00").getTime();
-        const shirt_close = new Date("July 14 2024 23:59:59").getTime();
 
         let logo_event = document.querySelector('#logo-event')
         let shirt_event = document.querySelector('#shirt-event')
@@ -90,12 +85,6 @@
         logo_event.addEventListener('click', () => {
             window.location.href = '/vote/logo';
         })
-
-        if (now < logo_open || now > logo_close) {
-            logo_event.classList.add('not-open');
-        } else {
-            logo_event.classList.remove('not-open')
-        }
 
         shirt_event.addEventListener('click', () => {
             window.location.href = '/vote/shirt';
