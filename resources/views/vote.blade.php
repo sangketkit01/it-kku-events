@@ -8,7 +8,12 @@
 @endpush
 
 @section('content')
-    <img src="/index/poster.png" alt="" id="poster">
+    @if($event == "shirt")   
+        <img src="/index/poster.png" alt="" id="poster">
+    @elseif($event == "logo")
+        <img src="/index/poster3.png" alt="" id="poster">
+    @endif
+    
     <h1 id="vote-header">ร่วมโหวต{{ $header }} IT</h1>
     <div class="count">
         <div class="countdown"><span id="days"></span>Days</div>
